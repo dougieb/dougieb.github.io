@@ -10,7 +10,7 @@
 				$('#toggle').click(function(){
 					
 					if ($('#wrapper').hasClass('expanded')){
-						$('#main').animate({width: '320px'}, 500);
+						$('#main').animate({width: '100%'}, 500);
 						$('#menu').animate({width: "0px"}, 500)
 						$('#wrapper').removeClass('expanded');
 					} else {
@@ -29,8 +29,8 @@
 		
 	</head>
 	<body>
-		<div id="wrapper" style="width: 320px;">
-			<div id="main" style="float: left; width: 320px; height: 480px; background: #ddd; overflow: hidden;">
+		<div id="wrapper" style="width: 100%;">
+			<div id="main" style="float: left; width: 100%; height: 480px; background: #ddd; overflow: hidden;">
 				<h1>Test</h1>
 				<a href="javascript:void(0);" id="toggle">Menu</a>
 			</div>
