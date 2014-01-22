@@ -2,9 +2,48 @@
 <html>
 	<head>
 		<script src="lib/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" href="/styles.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8">
+		
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				$('#toggle').click(function(){
+					
+					if ($('#wrapper').hasClass('expanded')){
+						$('#main').animate({width: '320px'}, 500);
+						$('#menu').animate({width: "0px"}, 500)
+						$('#wrapper').removeClass('expanded');
+					} else {
+						$('#main').animate({width: '50px'}, 500);
+						$('#menu').show();
+						
+						var menuWidth = $('#wrapper').width() - 50;
+						$('#menu').animate({width: menuWidth+"px"}, 500)
+						$('#wrapper').addClass('expanded');
+					}
+					
+				});
+			});
+
+		</script>
+		
 	</head>
 	<body>
-		<h1>Test</h1>
+		<div id="wrapper" style="width: 320px;">
+			<div id="main" style="float: left; width: 320px; height: 480px; background: #ddd; overflow: hidden;">
+				<h1>Test</h1>
+				<a href="javascript:void(0);" id="toggle">Menu</a>
+			</div>
+			<div id="menu" style="display:none; width: 0px; height: 480px; background: #CCC; overflow: hidden;">
+				<ul>
+					<li>Home</li>
+					<li>Flights</li>
+					<li>Hotels</li>
+					<li>Packages</li>
+					<li>Dashboard</li>
+					<li>Recent</li>					
+				</ul>
+			</div>
+		</div>
 	</body>
 </html>
