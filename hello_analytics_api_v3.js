@@ -89,9 +89,12 @@ function queryCoreReportingApi(profileId) {
   // Use the Analytics Service Object to query the Core Reporting API
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:' + profileId,
-    'start-date': '2012-03-03',
-    'end-date': '2012-03-03',
-    'metrics': 'ga:visits'
+	'dimensions': 'ga:browser,ga:browserVersion,ga:operatingSystem,ga:operatingSystemVersion,ga:deviceCategory',
+	'filters': 'ga:deviceCategory==mobile',
+    'start-date': '2014-01-01',
+    'end-date': '2014-01-31',
+    'metrics': 'ga:visits',
+	'sort': '-ga:visitors'
   }).execute(handleCoreReportingResults);
 }
 
@@ -104,10 +107,17 @@ function handleCoreReportingResults(results) {
 }
 
 function printResults(results) {
-  if (results.rows && results.rows.length) {
-    console.log('View (Profile) Name: ', results.profileInfo.profileName);
-    console.log('Total Visits: ', results.rows[0][0]);
-  } else {
-    console.log('No results found');
-  }
+  	
+	//jQuery.each(results, function( rows ) {
+	  //console.log( index + ": " + $( this ).text() );
+	//});
+
+console.log(results);
+	// if (results.rows && results.rows.length) {
+	//     for
+	// console.log('View (Profile) Name: ', results.profileInfo.profileName);
+	//     console.log('Total Visits: ', results.rows[0][0]);
+	//   } else {
+	//     console.log('No results found');
+	//   }
 }
