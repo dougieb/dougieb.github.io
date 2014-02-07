@@ -39,10 +39,10 @@ function handleWebproperties(results) {
     if (results && results.items && results.items.length) {
 
       // Get the first Google Analytics account
-      var firstAccountId = results.items[0].accountId;
+      var firstAccountId = 204993;
 
       // Get the first Web Property ID
-      var firstWebpropertyId = results.items[0].id;
+      var firstWebpropertyId = "UA-204993-5";
 
       // Query for Views (Profiles)
       queryProfiles(firstAccountId, firstWebpropertyId);
@@ -70,10 +70,10 @@ function handleProfiles(results) {
     if (results && results.items && results.items.length) {
 
       // Get the first View (Profile) ID
-      var firstProfileId = results.items[0].id;
+      var firstProfileId = 269851;
 
       // Step 3. Query the Core Reporting API
-      queryCoreReportingApi("UA-204993-5");
+      queryCoreReportingApi(firstProfileId);
 
     } else {
       console.log('No views (profiles) found for this user.');
