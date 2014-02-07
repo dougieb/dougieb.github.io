@@ -107,17 +107,14 @@ function handleCoreReportingResults(results) {
 }
 
 function printResults(results) {
-  	
-	//jQuery.each(results, function( rows ) {
-	  //console.log( index + ": " + $( this ).text() );
-	//});
+  	$('#results').append('<table>');
+	jQuery.each(results.rows, function( row ) {
+		$('#results').append('<tr>');
+	   jQuery.each(row, function(field) {
+			$('#results').append('<td>'+field+'</td>');
+		});
+		$('#results').append('</tr>');
+	});
+	$('#results').append('</table>');
 
-console.log(results);
-	// if (results.rows && results.rows.length) {
-	//     for
-	// console.log('View (Profile) Name: ', results.profileInfo.profileName);
-	//     console.log('Total Visits: ', results.rows[0][0]);
-	//   } else {
-	//     console.log('No results found');
-	//   }
 }
