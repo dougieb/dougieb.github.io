@@ -93,7 +93,7 @@ function queryCoreReportingApi(profileId) {
 	'filters': 'ga:deviceCategory==mobile',
     'start-date': '2014-01-01',
     'end-date': '2014-01-31',
-    'metrics': 'ga:visits',
+    'metrics': 'ga:visitors',
 	'sort': '-ga:visitors'
   }).execute(handleCoreReportingResults);
 }
