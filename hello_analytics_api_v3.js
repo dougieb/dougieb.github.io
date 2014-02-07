@@ -73,7 +73,7 @@ function handleProfiles(results) {
       var firstProfileId = results.items[0].id;
 
       // Step 3. Query the Core Reporting API
-      queryCoreReportingApi(firstProfileId);
+      queryCoreReportingApi("UA-204993-5");
 
     } else {
       console.log('No views (profiles) found for this user.');
