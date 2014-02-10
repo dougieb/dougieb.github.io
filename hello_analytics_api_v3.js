@@ -111,7 +111,7 @@ function printResults(results) {
   	$('#results').append('<table>');
 	jQuery.each(results.rows, function(r, row) {
 		$('#results').append('<tr>');
-		$('#results').append(r);
+		$('#results').append('<td>'+r+'</td>');
 	   jQuery.each(row, function(f, field) {
 			$('#results').append('<td>'+field+'</td>');
 		});
