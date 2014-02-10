@@ -115,6 +115,7 @@ function printResults(results) {
 		var tr = $('<tr></tr>');
 		tr.append('<td>'+r+'</td>');
 	   	jQuery.each(row, function(f, field) {
+			formattedResultValues(results, r, f, field);
 			tr.append('<td>'+field+'</td>');
 		});
 		table.append(tr);
@@ -122,4 +123,16 @@ function printResults(results) {
 	
 	$('#results').append(table);
 
+}
+
+function formattedResultValues(results, rindex, fkey, fvalue){
+	
+	// get field name
+	var fname = results.result.columnHeaders[f];
+	if (fname == 'ga:browserVersion'){
+		// get new value
+		var newvalue = fvalue.substring(0, fvalue.indexOf('.'));
+		results.rows[rindex][fkey] = newvalue;
+	}
+	
 }
