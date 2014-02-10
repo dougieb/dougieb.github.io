@@ -129,7 +129,7 @@ function formattedResultValues(results, rindex, fkey, fvalue){
 	
 	// get field name
 	var fname = results.result.columnHeaders[fkey];
-	if (fname == 'ga:browserVersion'){
+	if (fname.name == 'ga:browserVersion'){
 		// get new value
 		var newvalue = fvalue.substring(0, fvalue.indexOf('.'));
 		results.rows[rindex][fkey] = newvalue;
