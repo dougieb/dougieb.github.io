@@ -108,9 +108,9 @@ function handleCoreReportingResults(results) {
 
 function printResults(results) {
   	$('#results').append('<table>');
-	jQuery.each(results.rows, function( row ) {
+	jQuery.each(results.rows, function(r, row) {
 		$('#results').append('<tr>');
-	   jQuery.each(row, function(field) {
+	   jQuery.each(row, function(f, field) {
 			$('#results').append('<td>'+field+'</td>');
 		});
 		$('#results').append('</tr>');
