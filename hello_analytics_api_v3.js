@@ -109,13 +109,14 @@ function handleCoreReportingResults(results) {
 
 function printResults(results) {
 	
+	formattedResultValues(results);
+	
 	var table = $('<table></table>');
 	
 	jQuery.each(results.rows, function(r, row) {
 		var tr = $('<tr></tr>');
 		tr.append('<td>'+r+'</td>');
 	   	jQuery.each(row, function(f, field) {
-			formattedResultValues(results, r, f, field);
 			tr.append('<td>'+field+'</td>');
 		});
 		table.append(tr);
@@ -125,14 +126,19 @@ function printResults(results) {
 
 }
 
-function formattedResultValues(results, rindex, fkey, fvalue){
+function formattedResultValues(results){
 	
-	// get field name
-	var fname = results.result.columnHeaders[fkey];
-	if (fname.name == 'ga:browserVersion'){
-		// get new value
-		var newvalue = fvalue.substring(0, fvalue.indexOf('.'));
-		results.rows[rindex][fkey] = newvalue;
+	jQuery.each(results.rows, function(r, row) {
+		jQuery.each(row, function(f, fvalue) {
+			// get field name
+			var fname = results.result.columnHeaders[f];
+			
+			if (fname.name == 'ga:browserVersion'){
+				// get new value
+				var newvalue = fvalue.substring(0, fvalue.indexOf('.'));
+				results.rows[r][f] = newvalue;
+			}
+		}
 	}
 	
 }
