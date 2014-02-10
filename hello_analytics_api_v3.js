@@ -94,7 +94,8 @@ function queryCoreReportingApi(profileId) {
     'start-date': '2014-01-01',
     'end-date': '2014-01-31',
     'metrics': 'ga:visitors',
-	'sort': '-ga:visitors'
+	'sort': '-ga:visitors',
+	'max-results': 10000
   }).execute(handleCoreReportingResults);
 }
 
@@ -110,6 +111,7 @@ function printResults(results) {
   	$('#results').append('<table>');
 	jQuery.each(results.rows, function(r, row) {
 		$('#results').append('<tr>');
+		$('#results').append(r);
 	   jQuery.each(row, function(f, field) {
 			$('#results').append('<td>'+field+'</td>');
 		});
