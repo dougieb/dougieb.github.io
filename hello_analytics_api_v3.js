@@ -109,7 +109,11 @@ function handleCoreReportingResults(results) {
 
 function printResults(results) {
 	
+	// scrub results
 	formattedResultValues(results);
+	
+	// summarize
+	// todo
 	
 	var table = $('<table></table>');
 	
