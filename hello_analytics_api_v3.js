@@ -128,7 +128,7 @@ function printResults(results) {
 function formattedResultValues(results, rindex, fkey, fvalue){
 	
 	// get field name
-	var fname = results.result.columnHeaders[f];
+	var fname = results.result.columnHeaders[fkey];
 	if (fname == 'ga:browserVersion'){
 		// get new value
 		var newvalue = fvalue.substring(0, fvalue.indexOf('.'));
