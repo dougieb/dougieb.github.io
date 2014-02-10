@@ -126,10 +126,11 @@ function printResults(results) {
 
 }
 
-function formattedResultValues(results){
+function formattedResultValues(results) {
 	
 	jQuery.each(results.rows, function(r, row) {
 		jQuery.each(row, function(f, fvalue) {
+			
 			// get field name
 			var fname = results.result.columnHeaders[f];
 			
@@ -138,7 +139,7 @@ function formattedResultValues(results){
 				var newvalue = fvalue.substring(0, fvalue.indexOf('.'));
 				results.rows[r][f] = newvalue;
 			}
-		}
-	}
+		});
+	});
 	
 }
