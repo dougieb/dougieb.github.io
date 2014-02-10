@@ -108,15 +108,18 @@ function handleCoreReportingResults(results) {
 }
 
 function printResults(results) {
-  	$('#results').append('<table>');
+	
+	var table = $('<table></table>');
+	
 	jQuery.each(results.rows, function(r, row) {
-		$('#results').append('<tr>');
-		$('#results').append('<td>'+r+'</td>');
-	   jQuery.each(row, function(f, field) {
-			$('#results').append('<td>'+field+'</td>');
+		var tr = $('<tr></tr>');
+		tr.append('<td>'+r+'</td>');
+	   	jQuery.each(row, function(f, field) {
+			tr.append('<td>'+field+'</td>');
 		});
-		$('#results').append('</tr>');
+		table.append(tr);
 	});
-	$('#results').append('</table>');
+	
+	$('#results').append(table);
 
 }
