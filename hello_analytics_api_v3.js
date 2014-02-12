@@ -118,7 +118,7 @@ function printResults(results) {
 	// summarize
 	var summary = summarize(results);
 	
-	$('#results').html();
+	$('#results').empty();
 	
 	jQuery.each(summary, function(r, row) {
 		
