@@ -90,7 +90,7 @@ function queryCoreReportingApi(profileId) {
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:' + profileId,
 	'dimensions': 'ga:browser,ga:browserVersion,ga:operatingSystem,ga:operatingSystemVersion,ga:deviceCategory',
-	'filters': 'ga:deviceCategory==mobile',
+	//'filters': 'ga:deviceCategory==mobile',
     'start-date': '2014-01-01',
     'end-date': '2014-01-31',
     'metrics': 'ga:visitors',
@@ -113,7 +113,7 @@ function printResults(results) {
 	formattedResultValues(results);
 	
 	// summarize
-	var summary = summarize(results);	
+	var summary = summarize(results);
 	
 	var table = $('<table></table>');
 	
@@ -174,11 +174,6 @@ function summarize(results) {
 	}
 	
 	//sort
-	jQuery.each(summary, function(i, value){
-		summary[i].os.sort(function(a,b){
-			return a.val - b.val
-		});
-	});
 	
 	return summary;
 	
