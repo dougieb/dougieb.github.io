@@ -196,9 +196,23 @@ function summarize(results) {
 	
 	for (category in summary) {
 		var browserOSArray = [];
-		for (bos in summary[category]){
-			console.log(bos);
-		} 
+		for (bos in summary[category]['os']){
+			var visits = summary[category]['os'][bos];
+			browserOSArray.push({key: bos, visits: visits });
+		}
+		
+		browserOSArray.sort(function(a, b){
+			if (a.visits < b.visits) return -1;
+			if (b.visits < a.visits) return 1;
+			return 0;
+		});
+		
+		// replace options
+		summary[category]['os'].empty();
+		for (item in browserOSArray){
+			summary[category]['os'][item.key] = item.visits;
+		}
+		
 	}
 	
 	return summary;
