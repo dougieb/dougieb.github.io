@@ -169,8 +169,8 @@ function summarize(results) {
 	    var row = results.rows[i];
 	    if (!summary.hasOwnProperty(row[headers['ga:deviceCategory']])) summary[row[headers['ga:deviceCategory']]] = { os: {}, total: 0 };
 	    if (!summary[row[headers['ga:deviceCategory']]].os.hasOwnProperty(row[headers['ga:operatingSystem']])) summary[row[headers['ga:deviceCategory']]].os[row[headers['ga:operatingSystem']]] = 0;
-	    summary[row[headers['ga:deviceCategory']]].os[row[headers['ga:operatingSystem']]] += row[headers['ga:visitors']];
-	    summary[row[headers['ga:deviceCategory']]].total += row[headers['ga:visitors']];
+	    summary[row[headers['ga:deviceCategory']]].os[row[headers['ga:operatingSystem']]] += Number(row[headers['ga:visitors']]);
+	    summary[row[headers['ga:deviceCategory']]].total += Number(row[headers['ga:visitors']]);
 	}
 	
 	return summary;
