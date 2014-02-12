@@ -113,7 +113,7 @@ function printResults(results) {
 	formattedResultValues(results);
 	
 	// summarize
-	// todo
+	var summary = summarize(results);	
 	
 	var table = $('<table></table>');
 	
@@ -145,5 +145,34 @@ function formattedResultValues(results) {
 			}
 		});
 	});
+	
+}
+
+function headersArray(results) {
+	
+	var headers = {};
+	jQuery.each(results.result.columnHeaders, function(h, header) {
+		headers[header] = h;
+	});
+	
+	return headers;
+	
+}
+
+function summarize(results) {
+	
+	var headers = headersArray(results);
+
+	var summary = {};
+
+	for (var i = 0, c = results.rows.length; i < c; i += 1) {
+	    var row = results.rows[i];
+	    if (!summary.hasOwnProperty(row[headers['ga:deviceCategory']])) summary[row[headers['ga:deviceCategory']]] = { os: {}, total: 0 };
+	    if (!summary[row[headers['ga:deviceCategory']]].os.hasOwnProperty(row[headers['ga:operatingSystem']])) summary[row[headers['ga:deviceCategory']]].os[row[headers['ga:operatingSystem']]] = 0;
+	    summary[row[headers['ga:deviceCategory']]].os[row[headers['ga:operatingSystem']]] += row[headers['ga:visitors']];
+	    summary[row[headers['ga:deviceCategory']]].total += row[headers['ga:visitors']];
+	}
+	
+	return summary;
 	
 }
