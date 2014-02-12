@@ -123,12 +123,16 @@ function printResults(results) {
 	jQuery.each(summary, function(r, row) {
 		var tr = $('<tr></tr>');
 		tr.append('<td>'+row.category+'</td>');
-		tr.append('<tr><td><b>Total</b></td><td><b>'+row.total+'</b></td></tr>');
-	   	jQuery.each(row.os, function(osName, osVisits) {
+	   	tr.append('<td>OS / Browser</td><td>Visits</td><td>% of '+row.category+'</td>');
+		jQuery.each(row.os, function(osName, osVisits) {
 			if ((osVisits / row.total) > .01){
 				tr.append('<tr><td>'+osName+'</td><td>'+osVisits+'</td><td>'+(osVisits / row.total).toFixed(2)*100+'%</td></tr>');
 			}
 		});
+		
+		// add totals
+		tr.append('<tr><td><b>'+row.category+' total</b></td><td><b>'+row.total+'</b></td></tr>');
+		
 		table.append(tr);
 	});
 	
