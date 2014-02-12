@@ -123,7 +123,7 @@ function printResults(results) {
 	jQuery.each(summary, function(r, row) {
 		var tr = $('<tr></tr>');
 		tr.append('<td>'+row.category+'</td>');
-	   	tr.append('<tr><td>OS / Browser</td><td>Visits</td><td>% of '+row.category+'</td></tr>');
+	   	tr.append('<tr><th>OS / Browser</th><th>Visits</th><th>% of '+row.category+'</th></tr>');
 		jQuery.each(row.os, function(osName, osVisits) {
 			if ((osVisits / row.total) > .01){
 				tr.append('<tr><td>'+osName+'</td><td>'+osVisits+'</td><td>'+(osVisits / row.total).toFixed(2)*100+'%</td></tr>');
@@ -131,7 +131,7 @@ function printResults(results) {
 		});
 		
 		// add totals
-		tr.append('<tr><td><b>'+row.category+' total</b></td><td><b>'+row.total+'</b></td></tr>');
+		tr.append('<tr><th>'+row.category+' total</th><td><b>'+row.total+'</b></td></tr>');
 		
 		table.append(tr);
 	});

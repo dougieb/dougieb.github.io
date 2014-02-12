@@ -2,3 +2,4 @@
 ul { list-style: none; }
 
 #results table tr td { padding: 5px; vertical-align: top; border: 1px solid #CCC; }
+#results table tr th { font-weight: bold; }
