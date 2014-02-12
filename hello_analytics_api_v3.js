@@ -91,8 +91,8 @@ function queryCoreReportingApi(profileId) {
     'ids': 'ga:' + profileId,
 	'dimensions': 'ga:browser,ga:browserVersion,ga:operatingSystem,ga:operatingSystemVersion,ga:deviceCategory',
 	//'filters': 'ga:deviceCategory==mobile',
-    'start-date': '2014-01-01',
-    'end-date': '2014-01-31',
+    'start-date': '2013-12-01',
+    'end-date': '2013-12-31',
     'metrics': 'ga:visitors',
 	'sort': '-ga:visitors',
 	'max-results': 10000
