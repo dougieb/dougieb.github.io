@@ -118,9 +118,12 @@ function printResults(results) {
 	// summarize
 	var summary = summarize(results);
 	
-	var table = $('<table cellpadding="0" cellspacing="0" border="0"></table>');
+	$('#results').html();
 	
 	jQuery.each(summary, function(r, row) {
+		
+		var table = $('<table cellpadding="0" cellspacing="0" border="0"></table>');
+		
 		var tr = $('<tr></tr>');
 		tr.append('<td>'+row.category+'</td>');
 	   	tr.append('<tr><th>OS / Browser</th><th>Visits</th><th>% of '+row.category+'</th></tr>');
@@ -132,12 +135,13 @@ function printResults(results) {
 		
 		// add totals
 		tr.append('<tr><th>'+row.category+' total</th><td><b>'+row.total+'</b></td></tr>');
-		tr.wrap('<table cellpadding="0" cellspacing="0" border="0"></table>').wrap('<div class="results-section"></div>');
 		
 		table.append(tr);
+		
+		$('#results').append(table);
+		
 	});
 	
-	$('#results').html(table);
 
 }
 
