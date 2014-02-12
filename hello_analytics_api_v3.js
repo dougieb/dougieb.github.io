@@ -210,10 +210,12 @@ function summarize(results) {
 		console.log(summary);
 		
 		// replace options
-		//summary[category]['os'].empty();
-		//for (item in browserOSArray){
-		//	summary[category]['os'][item.key] = item.visits;
-		//}
+		delete summary[category]['os'];
+		summary[category]['os'] = {};
+		
+		for (item in browserOSArray){
+			summary[category]['os'][item.key] = item.visits;
+		}
 		
 	}
 	
