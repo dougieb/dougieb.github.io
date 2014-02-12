@@ -194,6 +194,13 @@ function summarize(results) {
 	
 	//sort
 	
+	for (category in summary) {
+		var browserOSArray = [];
+		for (bos in summary[category]){
+			console.log(bos);
+		} 
+	}
+	
 	return summary;
 	
 }
