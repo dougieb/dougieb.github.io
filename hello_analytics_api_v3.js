@@ -89,7 +89,7 @@ function queryCoreReportingApi(profileId) {
   // Use the Analytics Service Object to query the Core Reporting API
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:' + profileId,
-	'dimensions': 'ga:browser,ga:operatingSystem,ga:deviceCategory',
+	'dimensions': 'ga:browser,ga:browserVersion,ga:operatingSystem,ga:operatingSystemVersion,ga:deviceCategory',
 	//'filters': 'ga:deviceCategory==mobile',
     'start-date': '2013-12-01',
     'end-date': '2013-12-31',
@@ -120,14 +120,14 @@ function printResults(results) {
 	jQuery.each(summary, function(r, row) {
 		var tr = $('<tr></tr>');
 		tr.append('<td>'+row.category+'</td>');
-		tr.append('<tr><td>Total</td><td>'+row.total+'</td></tr>');
+		tr.append('<tr><td><b>Total</b></td><td><b>'+row.total+'</b></td></tr>');
 	   	jQuery.each(row.os, function(osName, osVisits) {
 			tr.append('<tr><td>'+osName+'</td><td>'+osVisits+'</td></tr>');
 		});
 		table.append(tr);
 	});
 	
-	$('#results').append(table);
+	$('#results').html(table);
 
 }
 
@@ -168,15 +168,18 @@ function summarize(results) {
 
 	for (var i = 0, c = results.rows.length; i < c; i += 1) {
 	    var row = results.rows[i];
+	
 	    if (!summary.hasOwnProperty(row[headers['ga:deviceCategory']])) {
 			summary[row[headers['ga:deviceCategory']]] = { category: '', osArray: [], os: {}, total: 0 };
 			summary[row[headers['ga:deviceCategory']]].category = row[headers['ga:deviceCategory']];
 		}
-	    if (!summary[row[headers['ga:deviceCategory']]].os.hasOwnProperty(row[headers['ga:operatingSystem']])) {
-			summary[row[headers['ga:deviceCategory']]].os[row[headers['ga:operatingSystem']]] = 0;
-			summary[row[headers['ga:deviceCategory']]].osArray.push(row[headers['ga:operatingSystem']]);
+	
+		var dimensionKey = row[headers['ga:operatingSystem']] + ' / ' + row[headers['ga:browser']];
+	    if (!summary[row[headers['ga:deviceCategory']]].os.hasOwnProperty(dimensionKey)) {
+			summary[row[headers['ga:deviceCategory']]].os[dimensionKey] = 0;
+			summary[row[headers['ga:deviceCategory']]].osArray.push(dimensionKey);
 		}
-	    summary[row[headers['ga:deviceCategory']]].os[row[headers['ga:operatingSystem']]] += Number(row[headers['ga:visitors']]);
+	    summary[row[headers['ga:deviceCategory']]].os[dimensionKey] += Number(row[headers['ga:visitors']]);
 	    summary[row[headers['ga:deviceCategory']]].total += Number(row[headers['ga:visitors']]);
 	}
 	
