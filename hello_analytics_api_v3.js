@@ -89,7 +89,7 @@ function queryCoreReportingApi(profileId) {
   // Use the Analytics Service Object to query the Core Reporting API
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:' + profileId,
-	'dimensions': 'ga:browser,ga:browserVersion,ga:operatingSystem,ga:operatingSystemVersion,ga:deviceCategory',
+	'dimensions': 'ga:browser,ga:browserVersion,ga:operatingSystem,ga:deviceCategory',
 	//'filters': 'ga:deviceCategory==mobile',
     'start-date': '2013-12-01',
     'end-date': '2013-12-31',
