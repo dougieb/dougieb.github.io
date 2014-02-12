@@ -119,7 +119,7 @@ function printResults(results) {
 	
 	jQuery.each(summary, function(r, row) {
 		var tr = $('<tr></tr>');
-		tr.append('<td>'+OS+'</td>');
+		tr.append('<td>category</td>');
 	   	jQuery.each(row, function(f, field) {
 			tr.append('<td>'+field.key+'</td><td>'+field.val+'</td>');
 		});
