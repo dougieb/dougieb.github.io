@@ -173,6 +173,15 @@ function summarize(results) {
 	    summary[row[headers['ga:deviceCategory']]].total += Number(row[headers['ga:visitors']]);
 	}
 	
+	//sort
+	for (var i = 0, c = summary.length; i < c; i += 1){
+		summary[i].sort(compare);
+	}
+	
 	return summary;
 	
+}
+
+function compare(a,b) {
+	return a.val - b.val;
 }
