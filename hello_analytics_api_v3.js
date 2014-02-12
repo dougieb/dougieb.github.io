@@ -152,7 +152,7 @@ function headersArray(results) {
 	
 	var headers = {};
 	jQuery.each(results.result.columnHeaders, function(h, header) {
-		headers[header] = h;
+		headers[header.name] = h;
 	});
 	
 	return headers;
