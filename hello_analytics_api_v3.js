@@ -174,7 +174,7 @@ function summarize(results) {
 	}
 	
 	//sort
-	for (var i = 0, c = summary.length; i < c; i += 1){
+	jQuery.each(summary, function(i, value))
 		summary[i].os.sort(compare);
 	}
 	
