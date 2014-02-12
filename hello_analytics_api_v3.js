@@ -175,7 +175,9 @@ function summarize(results) {
 	
 	//sort
 	jQuery.each(summary, function(i, value){
-		summary[i].os.sort(compare);
+		summary[i].os.sort(function(a,b){
+			return a.val - b.val
+		});
 	});
 	
 	return summary;
@@ -183,9 +185,5 @@ function summarize(results) {
 }
 
 function compare(a,b) {
-  if (a.val < b.val)
-     return -1;
-  if (a.val > b.val)
-    return 1;
-  return 0;
+  return a.val - b.val
 }
