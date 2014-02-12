@@ -4,3 +4,5 @@ ul { list-style: none; }
 #results table { margin-bottom: 20px; }
 #results table tr td, #results table tr th { padding: 5px; vertical-align: top; border: 1px solid #CCC; }
 #results table tr th { font-weight: bold; }
+
+.align-right { text-align: right; }
