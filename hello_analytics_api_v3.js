@@ -125,7 +125,7 @@ function printResults(results) {
 		var table = $('<table cellpadding="0" cellspacing="0" border="0"></table>');
 		
 		var tr = $('<tr></tr>');
-		tr.append('<td>'+row.category+'</td>');
+		tr.append('<th>'+row.category+'</th>');
 	   	tr.append('<tr><th>OS / Browser</th><th class="align-right">Visits</th><th>% of '+row.category+'</th></tr>');
 		jQuery.each(row.os, function(osName, osVisits) {
 			if ((osVisits / row.total) > .01){
