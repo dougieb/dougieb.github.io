@@ -121,7 +121,7 @@ function printResults(results) {
 		var tr = $('<tr></tr>');
 		tr.append('<td>'+row.category+'</td>');
 	   	jQuery.each(row.os, function(osName, osVisits) {
-			tr.append('<td>'+osName+'</td><td>'+osVisits+'</td>');
+			tr.append('<tr><td>'+osName+'</td><td>'+osVisits+'</td></tr>');
 		});
 		table.append(tr);
 	});
