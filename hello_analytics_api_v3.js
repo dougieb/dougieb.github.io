@@ -115,7 +115,7 @@ function printResults(results) {
 	// summarize
 	var summary = summarize(results);
 	
-	var table = $('<table></table>');
+	var table = $('<table cellpadding="0" cellspacing="0" border="0"></table>');
 	
 	jQuery.each(summary, function(r, row) {
 		var tr = $('<tr></tr>');
