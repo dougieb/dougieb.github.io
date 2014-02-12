@@ -207,6 +207,8 @@ function summarize(results) {
 			return 0;
 		});
 		
+		console.log(summary);
+		
 		// replace options
 		//summary[category]['os'].empty();
 		//for (item in browserOSArray){
