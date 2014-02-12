@@ -86,13 +86,16 @@ function handleProfiles(results) {
 function queryCoreReportingApi(profileId) {
   console.log('Querying Core Reporting API.');
 
+  var startDate = $('start-date').text();
+  var endDate = $('end-date').text();
+
   // Use the Analytics Service Object to query the Core Reporting API
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:' + profileId,
 	'dimensions': 'ga:browser,ga:browserVersion,ga:operatingSystem,ga:operatingSystemVersion,ga:deviceCategory',
 	//'filters': 'ga:deviceCategory==mobile',
-    'start-date': '2013-12-01',
-    'end-date': '2013-12-31',
+    'start-date': startDate,
+    'end-date': endDate,
     'metrics': 'ga:visitors',
 	'sort': '-ga:visitors',
 	'max-results': 10000
