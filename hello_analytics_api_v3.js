@@ -208,10 +208,10 @@ function summarize(results) {
 		});
 		
 		// replace options
-		summary[category]['os'].empty();
-		for (item in browserOSArray){
-			summary[category]['os'][item.key] = item.visits;
-		}
+		//summary[category]['os'].empty();
+		//for (item in browserOSArray){
+		//	summary[category]['os'][item.key] = item.visits;
+		//}
 		
 	}
 	
