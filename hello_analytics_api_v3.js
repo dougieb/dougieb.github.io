@@ -175,7 +175,7 @@ function summarize(results) {
 	
 	//sort
 	for (var i = 0, c = summary.length; i < c; i += 1){
-		summary[i].sort(compare);
+		summary[i].os.sort(compare);
 	}
 	
 	return summary;
@@ -183,5 +183,9 @@ function summarize(results) {
 }
 
 function compare(a,b) {
-	return a.val - b.val;
+  if (a.val < b.val)
+     return -1;
+  if (a.val > b.val)
+    return 1;
+  return 0;
 }
