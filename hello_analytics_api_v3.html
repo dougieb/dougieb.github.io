@@ -7,11 +7,19 @@
   </head>
   <body>
     <!-- The 2 Buttons for the user to interact with -->
-    <button id="authorize-button" style="visibility: hidden">Authorize</button><br/>
-    <button id="make-api-call-button" style="visibility: hidden">Get Visits</button>
-
-	Start Date (YYYY-MM-DD) <input id="start-date" type="input" value="2013-12-01" /><br/>
-	End Date (YYYY-MM-DD) <input id="end-date" type="input" value="2013-12-31" />
+    <button id="authorize-button" style="visibility: hidden">Authorize</button>
+	
+	<table>
+		<tr>
+			<td>Start Date (YYYY-MM-DD)</td><td><input id="start-date" type="input" value="2013-12-01" /></td>
+		</tr>
+		<tr>
+			<td>End Date (YYYY-MM-DD)</td><td><input id="end-date" type="input" value="2013-12-31" /></td>
+		</tr>
+    	<tr>
+			<td colspace="2"><button id="make-api-call-button" style="visibility: hidden">Get Visits</button></td>
+		</tr>
+	</table>
 
 	<div id="results"></div>
 
