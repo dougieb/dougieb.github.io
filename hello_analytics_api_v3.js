@@ -214,7 +214,7 @@ function summarize(results) {
 		summary[category]['os'] = {};
 		
 		for (item in browserOSArray){
-			summary[category]['os'][item.key] = item.visits;
+			summary[category]['os'][browserOSArray[item].key] = browserOSArray[item].visits;
 		}
 		
 	}
