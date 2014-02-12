@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>hello_analytics_api_v3.js</string>
+	<string>hello_analytics_api_v3.html</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -16,7 +16,9 @@
 			<key>filename</key>
 			<string>hello_analytics_api_v3.html</string>
 			<key>lastUsed</key>
-			<date>2014-02-12T18:22:58Z</date>
+			<date>2014-02-12T22:58:57Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -28,9 +30,7 @@
 			<key>filename</key>
 			<string>hello_analytics_api_v3.js</string>
 			<key>lastUsed</key>
-			<date>2014-02-12T18:22:58Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2014-02-12T22:58:57Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -42,13 +42,13 @@
 			<key>filename</key>
 			<string>index.html</string>
 			<key>lastUsed</key>
-			<date>2014-02-10T14:50:21Z</date>
+			<date>2014-02-12T22:58:40Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>styles.css</string>
 			<key>lastUsed</key>
-			<date>2014-02-12T18:22:56Z</date>
+			<date>2014-02-12T22:58:22Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -60,9 +60,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>11</integer>
+				<integer>26</integer>
 				<key>line</key>
-				<integer>3</integer>
+				<integer>23</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -74,14 +74,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>27</integer>
+				<integer>20</integer>
 				<key>line</key>
-				<integer>91</integer>
+				<integer>120</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>67</integer>
+			<integer>112</integer>
 		</dict>
 		<key>index.html</key>
 		<dict>
@@ -146,7 +146,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>81</integer>
+				<integer>37</integer>
 				<key>line</key>
 				<integer>3</integer>
 			</dict>
@@ -168,6 +168,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{904, 365}, {1562, 825}}</string>
+	<string>{{1439, 365}, {1027, 825}}</string>
 </dict>
 </plist>
