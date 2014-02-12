@@ -117,11 +117,11 @@ function printResults(results) {
 	
 	var table = $('<table></table>');
 	
-	jQuery.each(results.rows, function(r, row) {
+	jQuery.each(summary, function(r, row) {
 		var tr = $('<tr></tr>');
-		tr.append('<td>'+r+'</td>');
+		tr.append('<td>'+row.key+'</td>');
 	   	jQuery.each(row, function(f, field) {
-			tr.append('<td>'+field+'</td>');
+			tr.append('<td>'+field.key+'</td><td>'+field.value+'</td>');
 		});
 		table.append(tr);
 	});
