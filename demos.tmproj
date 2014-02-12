@@ -16,7 +16,7 @@
 			<key>filename</key>
 			<string>hello_analytics_api_v3.html</string>
 			<key>lastUsed</key>
-			<date>2014-02-10T14:50:27Z</date>
+			<date>2014-02-12T18:22:58Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -28,7 +28,7 @@
 			<key>filename</key>
 			<string>hello_analytics_api_v3.js</string>
 			<key>lastUsed</key>
-			<date>2014-02-11T16:51:33Z</date>
+			<date>2014-02-12T18:22:58Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -48,11 +48,11 @@
 			<key>filename</key>
 			<string>styles.css</string>
 			<key>lastUsed</key>
-			<date>2014-02-10T14:50:19Z</date>
+			<date>2014-02-12T18:22:56Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>200</integer>
+	<integer>142</integer>
 	<key>metaData</key>
 	<dict>
 		<key>hello_analytics_api_v3.html</key>
@@ -74,14 +74,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>8</integer>
+				<integer>27</integer>
 				<key>line</key>
-				<integer>115</integer>
+				<integer>91</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>111</integer>
+			<integer>67</integer>
 		</dict>
 		<key>index.html</key>
 		<dict>
@@ -146,7 +146,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>36</integer>
+				<integer>81</integer>
 				<key>line</key>
 				<integer>3</integer>
 			</dict>
@@ -168,6 +168,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{314, 365}, {1106, 741}}</string>
+	<string>{{904, 365}, {1562, 825}}</string>
 </dict>
 </plist>
