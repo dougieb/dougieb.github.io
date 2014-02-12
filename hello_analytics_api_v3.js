@@ -174,9 +174,9 @@ function summarize(results) {
 	}
 	
 	//sort
-	jQuery.each(summary, function(i, value))
+	jQuery.each(summary, function(i, value){
 		summary[i].os.sort(compare);
-	}
+	});
 	
 	return summary;
 	
