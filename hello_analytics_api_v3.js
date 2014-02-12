@@ -120,6 +120,7 @@ function printResults(results) {
 	jQuery.each(summary, function(r, row) {
 		var tr = $('<tr></tr>');
 		tr.append('<td>'+row.category+'</td>');
+		tr.append('<tr><td>Total</td><td>'+row.total+'</td></tr>');
 	   	jQuery.each(row.os, function(osName, osVisits) {
 			tr.append('<tr><td>'+osName+'</td><td>'+osVisits+'</td></tr>');
 		});
