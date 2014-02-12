@@ -202,8 +202,8 @@ function summarize(results) {
 		}
 		
 		browserOSArray.sort(function(a, b){
-			if (a.visits < b.visits) return -1;
-			if (b.visits < a.visits) return 1;
+			if (a.visits < b.visits) return 1;
+			if (b.visits < a.visits) return -1;
 			return 0;
 		});
 		
