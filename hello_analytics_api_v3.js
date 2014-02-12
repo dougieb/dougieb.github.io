@@ -86,8 +86,8 @@ function handleProfiles(results) {
 function queryCoreReportingApi(profileId) {
   console.log('Querying Core Reporting API.');
 
-  var startDate = $('start-date').text();
-  var endDate = $('end-date').text();
+  var startDate = $('start-date').val();
+  var endDate = $('end-date').val();
 
   // Use the Analytics Service Object to query the Core Reporting API
   gapi.client.analytics.data.ga.get({
