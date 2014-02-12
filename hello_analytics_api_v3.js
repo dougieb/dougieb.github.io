@@ -125,7 +125,9 @@ function printResults(results) {
 		tr.append('<td>'+row.category+'</td>');
 		tr.append('<tr><td><b>Total</b></td><td><b>'+row.total+'</b></td></tr>');
 	   	jQuery.each(row.os, function(osName, osVisits) {
-			tr.append('<tr><td>'+osName+'</td><td>'+osVisits+'</td></tr>');
+			if ((osVisits / row.total) > .01){
+				tr.append('<tr><td>'+osName+'</td><td>'+osVisits+'</td><td>'+(osVisits / row.total)+'</td></tr>');
+			}
 		});
 		table.append(tr);
 	});
