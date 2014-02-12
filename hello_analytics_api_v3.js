@@ -119,7 +119,7 @@ function printResults(results) {
 	
 	jQuery.each(summary, function(r, row) {
 		var tr = $('<tr></tr>');
-		tr.append('<td>category</td>');
+		tr.append('<td>'+row.category+'</td>');
 	   	jQuery.each(row, function(f, field) {
 			tr.append('<td>'+field.key+'</td><td>'+field.val+'</td>');
 		});
@@ -167,8 +167,14 @@ function summarize(results) {
 
 	for (var i = 0, c = results.rows.length; i < c; i += 1) {
 	    var row = results.rows[i];
-	    if (!summary.hasOwnProperty(row[headers['ga:deviceCategory']])) summary[row[headers['ga:deviceCategory']]] = { os: {}, total: 0 };
-	    if (!summary[row[headers['ga:deviceCategory']]].os.hasOwnProperty(row[headers['ga:operatingSystem']])) summary[row[headers['ga:deviceCategory']]].os[row[headers['ga:operatingSystem']]] = 0;
+	    if (!summary.hasOwnProperty(row[headers['ga:deviceCategory']])) {
+			summary[row[headers['ga:deviceCategory']]] = { category: '', osArray: [], os: {}, total: 0 };
+			summary[row[headers['ga:deviceCategory']]].category = row[headers['ga:deviceCategory']];
+		}
+	    if (!summary[row[headers['ga:deviceCategory']]].os.hasOwnProperty(row[headers['ga:operatingSystem']])) {
+			summary[row[headers['ga:deviceCategory']]].os[row[headers['ga:operatingSystem']]] = 0;
+			summary[row[headers['ga:deviceCategory']]].osArray.push(row[headers['ga:operatingSystem']]);
+		}
 	    summary[row[headers['ga:deviceCategory']]].os[row[headers['ga:operatingSystem']]] += Number(row[headers['ga:visitors']]);
 	    summary[row[headers['ga:deviceCategory']]].total += Number(row[headers['ga:visitors']]);
 	}
