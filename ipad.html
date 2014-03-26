@@ -11,9 +11,17 @@
 		<b>window.devicePixelRatio</b><br/>
 		<div style="margin-bottom: 20px;" id="devicePixelRatio"></div>
 		
+		<b>screen.width X screen.height</b><br/>
+		<div style="margin-bottom: 20px;">
+			<span id="screenWidth"></span> x <span id="screenHeight"></span>
+		</div>
+		
 		<script type="text/javascript">
 			document.getElementById('userAgent').innerHTML = navigator.userAgent;
 			document.getElementById('devicePixelRatio').innerHTML = window.devicePixelRatio;
+			
+			document.getElementById('screenWidth').innerHTML = screen.width;
+			document.getElementById('screenHeight').innerHTML = screen.height;
 		</script>
 	</body>
 </html>
