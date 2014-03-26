@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>hello_analytics_api_v3.html</string>
+	<string>ipad.html</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -16,9 +16,7 @@
 			<key>filename</key>
 			<string>hello_analytics_api_v3.html</string>
 			<key>lastUsed</key>
-			<date>2014-02-24T20:54:46Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2014-03-24T19:45:32Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -49,6 +47,14 @@
 			<string>styles.css</string>
 			<key>lastUsed</key>
 			<date>2014-02-12T23:11:47Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>ipad.html</string>
+			<key>lastUsed</key>
+			<date>2014-03-24T19:45:32Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -91,6 +97,20 @@
 				<integer>72</integer>
 				<key>line</key>
 				<integer>14</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>ipad.html</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>11</integer>
+				<key>line</key>
+				<integer>12</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -163,11 +183,12 @@
 		<string>hello_analytics_api_v3.js</string>
 		<string>slider.html</string>
 		<string>hello_analytics_api_v3.html</string>
+		<string>ipad.html</string>
 		<string>styles.css</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{145, 53}, {1285, 825}}</string>
+	<string>{{994, 96}, {1285, 825}}</string>
 </dict>
 </plist>

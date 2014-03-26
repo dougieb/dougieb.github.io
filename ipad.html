@@ -5,11 +5,15 @@
 	</head>
 
 	<body>
-		<b>User Agent</b><br/>
-		<div id="userAgent"></div>
+		<b>navigator.userAgent</b><br/>
+		<div style="margin-bottom: 20px;" id="userAgent"></div>
+		
+		<b>window.devicePixelRatio</b><br/>
+		<div style="margin-bottom: 20px;" id="devicePixelRatio"></div>
 		
 		<script type="text/javascript">
 			document.getElementById('userAgent').innerHTML = navigator.userAgent;
+			document.getElementById('devicePixelRatio').innerHTML = window.devicePixelRatio;
 		</script>
 	</body>
 </html>
