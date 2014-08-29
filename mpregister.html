@@ -8,7 +8,18 @@
 	mixpanel.init("d02bcba465b4ca7e30418248e036bacb");</script><!-- end Mixpanel -->
 
 
+	<script type="text/javascript">
 
+		mixpanel.register({
+			"Session ID" : 1234567890
+		}, .01);
+
+
+		mixpanel.track("Said Sorry", {
+			"Doug" : "is rad"
+		});
+
+	</script>
 
 </head>
 
