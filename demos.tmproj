@@ -52,7 +52,7 @@
 			<key>filename</key>
 			<string>ipad.html</string>
 			<key>lastUsed</key>
-			<date>2014-04-08T20:20:41Z</date>
+			<date>2014-09-19T16:29:05Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -189,6 +189,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{994, 96}, {1285, 825}}</string>
+	<string>{{976, 99}, {1285, 825}}</string>
 </dict>
 </plist>
