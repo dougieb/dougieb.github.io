@@ -11,8 +11,8 @@
 	<script type="text/javascript">
 
 		mixpanel.register_once({
-			"Session ID" : Math.round(Math.random()*10000000000)
-		});
+			"Session ID (Minute)" : Math.round(Math.random()*10000000000)
+		}, null, 0.0007);
 
 
 		mixpanel.track("Did Something", {
