@@ -1,0 +1,19 @@
+<script type="text/javascript">
+
+	mixpanel.track("Viewed Blog Page", {
+		"Page URI" : document.location.pathname,
+		"App Type" : "Blogs",
+	    "Page Title" : document.title,
+
+		// last touch attribution US10560
+		"utm_medium_last"	: document.URL.toQueryParams().utm_medium_last,
+		"utm_source_last"	: document.URL.toQueryParams().utm_source_last,
+		"utm_campaign_last"	: document.URL.toQueryParams().utm_campaign_last,
+		"utm_term_last"		: document.URL.toQueryParams().utm_term_last,
+		"utm_content_last"	: document.URL.toQueryParams().utm_content_last
+		
+		
+	});
+
+
+</script>
